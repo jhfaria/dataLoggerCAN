@@ -42,8 +42,8 @@ dataLoggerCAN.list \
 all: dataLoggerCAN.elf secondary-outputs
 
 # Tool invocations
-dataLoggerCAN.elf: $(OBJS) $(USER_OBJS) /home/jhfaria/STM32CubeIDE/workspace/dataLoggerCAN/STM32F429ZITX_FLASH.ld
-	arm-none-eabi-gcc -o "dataLoggerCAN.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"/home/jhfaria/STM32CubeIDE/workspace/dataLoggerCAN/STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="dataLoggerCAN.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+dataLoggerCAN.elf: $(OBJS) $(USER_OBJS) /home/jhfaria/Documents/git/dataLoggerCAN/workspace/dataLoggerCAN/STM32F429ZITX_FLASH.ld
+	arm-none-eabi-gcc -o "dataLoggerCAN.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"/home/jhfaria/Documents/git/dataLoggerCAN/workspace/dataLoggerCAN/STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="dataLoggerCAN.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
